@@ -6,9 +6,9 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto px-6 py-10">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
-            <p className="font-bold text-[#1c1c19]">mYcutter</p>
+            <p className="text-[#9f3f1a] tracking-tighter italic font-extrabold">mYcutter</p>
             <p className="text-sm text-[#56423b] mt-1">
-              Fast, offline video editor for Mac.
+              Fast, offline video editor.
             </p>
           </div>
 
