@@ -23,7 +23,7 @@ export default function Navbar() {
             height={36}
             className="rounded-lg"
           />
-          <span className="text-xl font-bold text-[#1c1c19] group-hover:text-[#9f3f1a] transition-colors">
+          <span className="text-[32px] leading-none text-[#9f3f1a] tracking-tighter italic font-extrabold whitespace-nowrap">
             mYcutter
           </span>
         </Link>
