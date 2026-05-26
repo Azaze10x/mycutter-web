@@ -93,10 +93,10 @@ export default function TermsPage() {
               <p>
                 For questions about these terms, please contact us at{" "}
                 <a
-                  href="mailto:abaddon.dad@gmail.com"
+                  href="mailto:info@mycutter.app"
                   className="text-[#9f3f1a] hover:underline"
                 >
-                  abaddon.dad@gmail.com
+                  info@mycutter.app
                 </a>
                 .
               </p>

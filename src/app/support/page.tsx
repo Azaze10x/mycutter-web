@@ -97,10 +97,10 @@ export default function SupportPage() {
               email us directly.
             </p>
             <a
-              href="mailto:abaddon.dad@gmail.com"
+              href="mailto:info@mycutter.app"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#9f3f1a] text-white rounded-md font-medium hover:bg-[#802a04] transition-colors"
             >
-              abaddon.dad@gmail.com
+              info@mycutter.app
             </a>
           </div>
 
