@@ -15,9 +15,9 @@ const courier = Courier_Prime({
 });
 
 export const metadata: Metadata = {
-  title: "mYcutter — Offline Video Editor for Mac",
+  title: "mYcutter — Offline Video Editor",
   description:
-    "Fast, offline video editor for Mac. No sign-in, no cloud, no watermark. Edit videos locally on your machine.",
+    "Fast, offline video editor for your machine. No sign-in, no cloud, no watermark. Edit videos locally.",
 };
 
 export default function RootLayout({
