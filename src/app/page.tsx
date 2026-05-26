@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import TypewriterText from "@/components/TypewriterText";
 
 export default function Home() {
   return (
@@ -10,19 +10,10 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero */}
         <section className="max-w-5xl mx-auto px-6 pt-16 pb-20 text-center">
-          <div className="flex justify-center mb-8">
-            <Image
-              src="/mycutter-web/logo.png"
-              alt="mYcutter"
-              width={120}
-              height={120}
-              className="rounded-2xl shadow-lg"
-              priority
-            />
-          </div>
-          <h1 className="text-5xl font-extrabold tracking-tight text-[#1c1c19] mb-4">
-            Edit videos offline.
-          </h1>
+          <TypewriterText
+            text="Edit videos offline."
+            className="text-5xl font-extrabold tracking-tight text-[#1c1c19] mb-4"
+          />
           <p className="text-xl text-[#56423b] max-w-xl mx-auto mb-8">
             No sign-in. No cloud. No watermark. Just fast, local video editing on
             your Mac.
