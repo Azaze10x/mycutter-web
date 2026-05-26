@@ -6,17 +6,26 @@ interface TypewriterTextProps {
   text: string;
   className?: string;
   speed?: number;
+  delay?: number;
 }
 
 export default function TypewriterText({
   text,
   className = "",
   speed = 80,
+  delay = 0,
 }: TypewriterTextProps) {
   const [displayed, setDisplayed] = useState("");
   const [index, setIndex] = useState(0);
+  const [started, setStarted] = useState(false);
 
   useEffect(() => {
+    const startTimer = setTimeout(() => setStarted(true), delay);
+    return () => clearTimeout(startTimer);
+  }, [delay]);
+
+  useEffect(() => {
+    if (!started) return;
     if (index < text.length) {
       const timer = setTimeout(() => {
         setDisplayed((prev) => prev + text[index]);
@@ -24,14 +33,14 @@ export default function TypewriterText({
       }, speed);
       return () => clearTimeout(timer);
     }
-  }, [index, text, speed]);
+  }, [index, text, speed, started]);
 
   return (
-    <h1 className={className}>
+    <span className={className}>
       {displayed}
-      {index < text.length && (
+      {started && index < text.length && (
         <span className="animate-pulse text-[#9f3f1a]">|</span>
       )}
-    </h1>
+    </span>
   );
 }
