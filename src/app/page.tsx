@@ -13,7 +13,7 @@ export default function Home() {
         <section className="max-w-5xl mx-auto px-6 pt-16 pb-20 text-center">
           <div className="flex justify-center mb-8">
             <Image
-              src="/mycutter-web/logo.png"
+              src="/logo.png"
               alt="mYcutter"
               width={120}
               height={120}
