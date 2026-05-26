@@ -26,7 +26,7 @@ export default function Home() {
           </h1>
           <p className="text-xl text-[#56423b] max-w-xl mx-auto mb-8">
             <TypewriterText
-              text="No sign-in. No cloud. No watermark. Just fast, local video editing on your Mac."
+              text="No sign-in. No cloud. No watermark. Just fast, local video editing on your machine."
               speed={40}
               delay={1600}
             />
