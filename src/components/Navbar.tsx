@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -16,13 +15,6 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-[#fdf9f4]/90 backdrop-blur-sm border-b border-[#ddc0b7]">
       <nav className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <Image
-            src="/mycutter-web/logo.png"
-            alt="mYcutter"
-            width={36}
-            height={36}
-            className="rounded-lg"
-          />
           <span className="text-[32px] leading-none text-[#9f3f1a] tracking-tighter italic font-extrabold whitespace-nowrap">
             mYcutter
           </span>
