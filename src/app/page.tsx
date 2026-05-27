@@ -45,6 +45,18 @@ export default function Home() {
               Coming Soon for Windows
             </span>
           </div>
+
+          {/* Hero Image */}
+          <div className="mt-12 flex justify-center">
+            <Image
+              src="/hero.png"
+              alt="mYcutter video editor on a desktop"
+              width={900}
+              height={600}
+              className="rounded-xl shadow-2xl border border-[#e6e2dd]"
+              priority
+            />
+          </div>
         </section>
 
         {/* Features */}
