@@ -19,6 +19,13 @@ export default function TypewriterText({
   const [index, setIndex] = useState(0);
   const [started, setStarted] = useState(false);
 
+  // Reset when text changes (language switch)
+  useEffect(() => {
+    setDisplayed("");
+    setIndex(0);
+    setStarted(false);
+  }, [text]);
+
   useEffect(() => {
     const startTimer = setTimeout(() => setStarted(true), delay);
     return () => clearTimeout(startTimer);
