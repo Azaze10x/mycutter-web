@@ -1,71 +1,59 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useI18n } from "@/lib/i18n";
 
 export default function PrivacyPage() {
+  const { t } = useI18n();
+
   return (
     <>
       <Navbar />
       <main className="flex-1">
         <div className="max-w-3xl mx-auto px-6 py-16">
           <h1 className="text-4xl font-extrabold text-[#1c1c19] mb-4">
-            Privacy Policy
+            {t("privacyTitle")}
           </h1>
           <p className="text-sm text-[#8a726a] mb-10">
-            Last updated: May 26, 2026
+            {t("privacyUpdated")}
           </p>
 
           <div className="prose prose-sm max-w-none text-[#56423b] space-y-6">
             <section>
               <h2 className="text-xl font-bold text-[#1c1c19] mb-2">
-                No Data Collection
+                {t("privacyNoDataTitle")}
               </h2>
-              <p>
-                mYcutter does not collect, store, or transmit any personal data.
-                The app operates entirely offline and all video processing is
-                performed locally on your Mac.
-              </p>
+              <p>{t("privacyNoDataDesc")}</p>
             </section>
 
             <section>
               <h2 className="text-xl font-bold text-[#1c1c19] mb-2">
-                Offline-Only Operation
+                {t("privacyOfflineTitle")}
               </h2>
-              <p>
-                mYcutter is designed to function without an internet connection.
-                The app does not make any network requests, does not use
-                analytics, and does not include any telemetry or tracking
-                mechanisms.
-              </p>
+              <p>{t("privacyOfflineDesc")}</p>
             </section>
 
             <section>
               <h2 className="text-xl font-bold text-[#1c1c19] mb-2">
-                No User Accounts
+                {t("privacyNoAccountsTitle")}
               </h2>
-              <p>
-                mYcutter does not require user registration or authentication.
-                There are no accounts, passwords, or user profiles.
-              </p>
+              <p>{t("privacyNoAccountsDesc")}</p>
             </section>
 
             <section>
               <h2 className="text-xl font-bold text-[#1c1c19] mb-2">
-                Local File Handling
+                {t("privacyLocalTitle")}
               </h2>
-              <p>
-                All files you import into mYcutter remain on your local machine.
-                The app does not upload your videos, thumbnails, or project files
-                to any external server.
-              </p>
+              <p>{t("privacyLocalDesc")}</p>
             </section>
 
             <section>
               <h2 className="text-xl font-bold text-[#1c1c19] mb-2">
-                Contact
+                {t("privacyContactTitle")}
               </h2>
               <p>
-                If you have any questions about this privacy policy, please
-                contact us at{" "}
+                {t("privacyContactDesc")}{" "}
                 <a
                   href="mailto:info@mycutter.app"
                   className="text-[#9f3f1a] hover:underline"

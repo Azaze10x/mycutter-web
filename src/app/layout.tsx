@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Chivo, Courier_Prime } from "next/font/google";
 import "./globals.css";
+import I18nClientWrapper from "@/components/I18nClientWrapper";
 
 const chivo = Chivo({
   variable: "--font-chivo",
@@ -34,7 +35,9 @@ export default function RootLayout({
       className={`${chivo.variable} ${courier.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-[family-name:var(--font-chivo)]">
-        {children}
+        <I18nClientWrapper>
+          {children}
+        </I18nClientWrapper>
         {/* Cloudflare Web Analytics */}
         <script
           defer

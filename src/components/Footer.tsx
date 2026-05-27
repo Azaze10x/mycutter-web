@@ -1,6 +1,11 @@
+"use client";
+
 import Link from "next/link";
+import { useI18n } from "@/lib/i18n";
 
 export default function Footer() {
+  const { t } = useI18n();
+
   return (
     <footer className="mt-auto border-t border-[#ddc0b7] bg-[#fdf9f4]">
       <div className="max-w-5xl mx-auto px-6 py-10">
@@ -8,7 +13,7 @@ export default function Footer() {
           <div>
             <p className="text-[#9f3f1a] tracking-tighter italic font-extrabold">mYcutter</p>
             <p className="text-sm text-[#56423b] mt-1">
-              Fast, offline video editor.
+              {t("footerTagline")}
             </p>
           </div>
 
@@ -17,25 +22,25 @@ export default function Footer() {
               href="/support"
               className="text-[#56423b] hover:text-[#9f3f1a] transition-colors"
             >
-              Support
+              {t("footerSupport")}
             </Link>
             <Link
               href="/privacy"
               className="text-[#56423b] hover:text-[#9f3f1a] transition-colors"
             >
-              Privacy Policy
+              {t("footerPrivacy")}
             </Link>
             <Link
               href="/terms"
               className="text-[#56423b] hover:text-[#9f3f1a] transition-colors"
             >
-              Terms of Service
+              {t("footerTerms")}
             </Link>
           </div>
         </div>
 
         <p className="text-xs text-[#8a726a] mt-8 text-center">
-          © 2026 mYcutter. All rights reserved.
+          {t("footerRights")}
         </p>
       </div>
     </footer>
