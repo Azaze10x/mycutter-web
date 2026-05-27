@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "mYcutter — Offline Video Editor",
   description:
     "Fast, offline video editor for your machine. No sign-in, no cloud, no watermark. Edit videos locally.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
