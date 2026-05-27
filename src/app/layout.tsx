@@ -35,11 +35,11 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-[family-name:var(--font-chivo)]">
         {children}
-        {/* Cloudflare Web Analytics — replace YOUR_TOKEN from dash.cloudflare.com */}
+        {/* Cloudflare Web Analytics */}
         <script
           defer
           src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon='{"token": "YOUR_TOKEN"}'
+          data-cf-beacon='{"token": "87f9d2ee6e224e0b9902905fa51e8925"}'
         />
       </body>
     </html>
