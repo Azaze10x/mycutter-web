@@ -10,6 +10,13 @@ import { useI18n } from "@/lib/i18n";
 export default function Home() {
   const { t } = useI18n();
 
+  const formats: { key: string; w: number; h: number; resolution: string; labelKey: string }[] = [
+    { key: "landscape", w: 24, h: 14, resolution: "1920×1080", labelKey: "formatLandscape" },
+    { key: "portrait", w: 14, h: 24, resolution: "1080×1920", labelKey: "formatPortrait" },
+    { key: "square", w: 18, h: 18, resolution: "1080×1080", labelKey: "formatSquare" },
+    { key: "instagram", w: 16, h: 20, resolution: "1080×1350", labelKey: "formatInstagram" },
+  ];
+
   const features = [
     {
       key: "featOffline",
@@ -40,6 +47,11 @@ export default function Home() {
       key: "featExport",
       title: t("featExportTitle"),
       desc: t("featExportDesc"),
+    },
+    {
+      key: "featMultilang",
+      title: t("featMultilangTitle"),
+      desc: t("featMultilangDesc"),
     },
   ];
 
@@ -94,6 +106,30 @@ export default function Home() {
               className="rounded-xl shadow-2xl border border-[#e6e2dd]"
               priority
             />
+          </div>
+        </section>
+
+        {/* Choose Format */}
+        <section className="max-w-5xl mx-auto px-6 py-16">
+          <h2 className="font-label text-[11px] font-bold text-[#56423b] uppercase tracking-wider mb-6 text-center">
+            {t("chooseFormatTitle")}
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {formats.map((f) => (
+              <div
+                key={f.key}
+                className="flex flex-col items-center gap-2 p-5 rounded-xl border border-[#ddc0b7] bg-white hover:border-[#9f3f1a] hover:shadow-md transition-all"
+              >
+                <div
+                  className="border-2 border-[#ddc0b7] rounded-sm"
+                  style={{ width: `${f.w * 2}px`, height: `${f.h * 2}px` }}
+                />
+                <span className="text-xs font-bold uppercase tracking-wider text-[#1c1c19]">
+                  {t(f.labelKey)}
+                </span>
+                <span className="text-[11px] text-[#8a726a]">{f.resolution}</span>
+              </div>
+            ))}
           </div>
         </section>
 
