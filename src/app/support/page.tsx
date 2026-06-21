@@ -62,10 +62,10 @@ export default function SupportPage() {
               {t("supportContactDesc")}
             </p>
             <a
-              href="mailto:info@mycutter.app"
+              href="mailto:info@shamantech.co"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#9f3f1a] text-white rounded-md font-medium hover:bg-[#802a04] transition-colors"
             >
-              info@mycutter.app
+              info@shamantech.co
             </a>
           </div>
 

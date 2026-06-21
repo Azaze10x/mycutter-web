@@ -55,10 +55,10 @@ export default function PrivacyPage() {
               <p>
                 {t("privacyContactDesc")}{" "}
                 <a
-                  href="mailto:info@mycutter.app"
+                  href="mailto:info@shamantech.co"
                   className="text-[#9f3f1a] hover:underline"
                 >
-                  info@mycutter.app
+                  info@shamantech.co
                 </a>
                 .
               </p>
